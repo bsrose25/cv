@@ -1,6 +1,6 @@
 ---
-title: "Nick Strayer's CV"
-author: Nick Strayer
+title: "Bailey Rose's CV"
+author: Bailey Rose
 date: "`r Sys.Date()`"
 output:
   pagedown::html_resume:
@@ -27,7 +27,7 @@ library(tidyverse)
 using_googlesheets <- TRUE
 
 # Just the copied URL from the sheet
-positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/14MQICF2F8-vf8CKPF1m4lyGKO6_thG-4aSwat1e2TWc"
+positions_sheet_loc <- "https://docs.google.com/spreadsheets/d/1HI1a0ITns7PR-OO6RPwzp1xnmidQBLvfaBcWkThYvy0/edit#gid=1406459246"
 
 # Is this sheet available for anyone to read? If you're using a private sheet
 # set this to false and go to gather_data.R and run the data loading manually
@@ -40,8 +40,8 @@ sheet_is_publicly_readable <- TRUE
 PDF_EXPORT <- FALSE
 
 
-CV_PDF_LOC <- "https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf"
-CV_HTML_LOC <- "nickstrayer.me/cv/"
+CV_PDF_LOC <- "https://github.com/bsrose25/cv/raw/master/rose_cv.pdf"
+#CV_HTML_LOC <- ""
 
 
 # A global (gasp) variable that holds all the links that were inserted for
@@ -122,7 +122,7 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Nick Strayer {#title}
+Bailey Rose {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -182,48 +182,30 @@ print_section(position_data, 'teaching_positions')
 
 
 
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-print_text_block(text_blocks, 'data_science_writing_aside')
-```
-:::
-
-```{r}
-print_section(position_data, 'data_science_writings')
-```
-
-
-
-Selected Press (About)  {data-icon=newspaper}
+Awards and Recognition {data-icon=award}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'about_me_press')
+print_section(position_data, 'awards')
 ```
 
 
-<br>
-<br>
 
-
-Selected Press (By)  {data-icon=newspaper}
+Presentations {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
 ```{r}
-print_section(position_data, 'by_me_press')
+print_section(position_data, 'academic_presentations')
 ```
 
 
-
-Selected Publications, Posters, and Talks {data-icon=book}
+Publications {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 print_section(position_data, 'academic_articles')
 ```
+
 
 
 
